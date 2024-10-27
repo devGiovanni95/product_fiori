@@ -1,0 +1,58 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="br.com.produtos.produtos.controller.Produtos" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+    <content>                                                                                           
+        <Table noDataText="Drop column list items here and columns in the area above" id="table1" inset="true" growing="true" items="{path:'/Products',parameters:{expand:'Category,Supplier'},sorter:[{path:'ProductID',descending:false}]}">
+            <items>
+                <ColumnListItem type="Active" id="item1">
+                    <cells>
+                        <Text text="{Category/CategoryName}" id="text6"/>
+                        <Text text="{QuantityPerUnit}" id="text7"/>
+                        <Text text="{UnitPrice}" id="text8"/>
+                        <ObjectIdentifier xmlns="sap.m" title="{ProductName}" text="ID Produto: {ProductID}" titleActive="fasle" id="identifier0"/>
+                        <ObjectIdentifier xmlns="sap.m" title="{Supplier/CompanyName}" text="ID: {SupplierID}" titleActive="fasle" id="identifier1"/></cells>
+                </ColumnListItem>
+            </items>
+            <columns>
+                <Column id="column3" mergeDuplicates="true">
+                    <header>
+                        <Label text="Categoria" id="label3"/>
+                    </header>
+                </Column>
+                <Column id="column4">
+                    <header>
+                        <Label text="Produtos" id="label4"/>
+                    </header>
+                </Column>
+                <Column id="column5" popinHAlign="Center">
+                    <header>
+                        <Label text="Quantidade por unidade" id="label5"/>
+                    </header>
+                </Column>
+                <Column id="column0" popinHAlign="Center">
+                    <header>
+                        <Text text="Posição no estoque" id="text0"/>
+                    </header>
+                </Column>
+                <Column id="column1" popinHAlign="Center">
+                    <header>
+                        <Text text="Preço unitário" id="text1"/>
+                    </header>
+                </Column>
+                <Column id="column2" popinHAlign="Center">
+                    <header>
+                        <Text text="Local Armazenado" id="text2"/>
+                    </header>
+                </Column>
+                <Column id="column3_1730003541526" popinHAlign="Center">
+                    <header>
+                        <Text text="Fornecedor" id="text3"/>
+                    </header>
+                </Column>
+                <Column id="column4_1730003552222" popinHAlign="Center">
+                    <header>
+                        <Text text="Status Produção" id="text4"/>
+                    </header>
+                </Column></columns></Table>
+    </content>
+    </Page>
+</mvc:View>
