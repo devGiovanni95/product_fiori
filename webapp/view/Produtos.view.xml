@@ -10,7 +10,7 @@
                         <Text text="{QuantityPerUnit}" id="text7"/>
                         <GenericTag id="_IDGenGenericTag1" text="{= ${UnitsInStock} > 50 ? 'Em Estoque' : ${UnitsInStock} > 20 ? 'Limite Atingido' : 'Baixo Estoque'}"
                             status="{= ${UnitsInStock} > 50 ? 'Success' : ${UnitsInStock} > 20 ? 'Warning' : 'Error' }"/>
-                        <Text text="{UnitPrice}" id="text8"/>
+                        <Text text="{parts: [{path: 'UnitPrice'}, {path: 'UnitPrice'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false}}" id="text8"/>
                             <tnt:InfoLabel id="_IDGenInfoLabel1" text="{= ${ReorderLevel} >= 25 ? 'Fábrica' : ${ReorderLevel} > 10 ? 'Galpão' : 'Loja'}" />
                         <ObjectIdentifier xmlns="sap.m" title="{Supplier/CompanyName}" text="ID: {SupplierID}" titleActive="false" id="identifier1"/>
                             <tnt:InfoLabel id="_IDGenInfoLabel2" text="{= ${Discontinued} === false ? 'Em Produção' : 'Suspenso'}" />
