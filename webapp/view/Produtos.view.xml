@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="br.com.produtos.produtos.controller.Produtos" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" controllerName="br.com.produtos.produtos.controller.Produtos" displayBlock="true">
     <Page id="page" title="{i18n>title}">
     <content>                                                                                           
         <Table noDataText="Drop column list items here and columns in the area above" id="table1" inset="true" growing="true" items="{path:'/Products',parameters:{expand:'Category,Supplier'},sorter:[{path:'ProductID',descending:false}]}">
@@ -6,10 +6,15 @@
                 <ColumnListItem type="Active" id="item1">
                     <cells>
                         <Text text="{Category/CategoryName}" id="text6"/>
+                        <ObjectIdentifier xmlns="sap.m" title="{ProductName}" text="ID Produto: {ProductID}" titleActive="false" id="identifier0"/>
                         <Text text="{QuantityPerUnit}" id="text7"/>
                         <Text text="{UnitPrice}" id="text8"/>
-                        <ObjectIdentifier xmlns="sap.m" title="{ProductName}" text="ID Produto: {ProductID}" titleActive="fasle" id="identifier0"/>
-                        <ObjectIdentifier xmlns="sap.m" title="{Supplier/CompanyName}" text="ID: {SupplierID}" titleActive="fasle" id="identifier1"/></cells>
+                        <ObjectIdentifier xmlns="sap.m" title="{Supplier/CompanyName}" text="ID: {SupplierID}" titleActive="false" id="identifier1"/>
+                        <GenericTag id="_IDGenGenericTag1" text="{= ${UnitsInStock} > 50 ? 'Em Estoque' : ${UnitsInStock} > 20 ? 'Limite Atingido' : 'Baixo Estoque'}"
+                            status="{= ${UnitsInStock} > 50 ? 'Success' : ${UnitsInStock} > 20 ? 'Warning' : 'Error' }"/>
+                            <tnt:InfoLabel id="_IDGenInfoLabel1" text="{= ${ReorderLevel} >= 25 ? 'Fábrica' : ${ReorderLevel} > 10 ? 'Galpão' : 'Loja'}" />
+                            <tnt:InfoLabel id="_IDGenInfoLabel2" text="{= ${Discontinued} === false ? 'Em Produção' : 'Suspenso'}" />
+                    </cells>
                 </ColumnListItem>
             </items>
             <columns>
