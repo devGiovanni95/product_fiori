@@ -15,11 +15,11 @@ Este documento descreve o processo de criação de uma aplicação em SAP Fiori 
 
 1. **Visualização de Produtos**: A aplicação exibirá uma lista de produtos com informações relevantes, como nome, descrição, preço e quantidade em estoque.
   
-2. **Filtros**: Os usuários poderão aplicar filtros para refinar a busca por produtos com base em critérios como categoria, preço e disponibilidade.
+<!-- 2. **Filtros**: Os usuários poderão aplicar filtros para refinar a busca por produtos com base em critérios como categoria, preço e disponibilidade. -->
   
-3. **Exportação de Relatórios**: A aplicação permitirá exportar relatórios em formatos como Excel ou PDF para análise externa.
+<!-- 3. **Exportação de Relatórios**: A aplicação permitirá exportar relatórios em formatos como Excel ou PDF para análise externa. -->
 
-## Passos para Criação da Aplicação
+<!-- ## Passos para Criação da Aplicação
 
 ### 1. Configuração do Ambiente
 
@@ -62,7 +62,7 @@ Este documento descreve o processo de criação de uma aplicação em SAP Fiori 
 
 ## Conclusão
 
-A aplicação Fiori para geração de relatórios de produtos proporcionará uma maneira eficiente e amigável para os usuários acessarem e analisarem dados de produtos. Através do uso de OData Services e SAPUI5, a aplicação assegura uma experiência de usuário fluida e responsiva.
+A aplicação Fiori para geração de relatórios de produtos proporcionará uma maneira eficiente e amigável para os usuários acessarem e analisarem dados de produtos. Através do uso de OData Services e SAPUI5, a aplicação assegura uma experiência de usuário fluida e responsiva. -->
 
 
 
